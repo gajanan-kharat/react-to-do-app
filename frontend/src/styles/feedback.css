@@ -1,0 +1,44 @@
+/* Feedback.css */
+.feedback-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(245, 245, 247, 0.8);
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem;
+  color: #34c759; /* iOS green */
+}
+
+.error-message {
+  color: #ff3b30; /* iOS red */
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Reuse your existing iOS styles */
+.ios-input, .ios-textarea {
+  /* Your existing input styles */
+}
+
+.ios-button {
+  /* Your existing button styles */
+  margin-top: 1rem;
+}

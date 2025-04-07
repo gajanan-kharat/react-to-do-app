@@ -1,0 +1,128 @@
+/* iOS-Inspired Navigation Bar */
+.main-header {
+  background: rgba(250, 250, 250, 0.65); /* Softer translucent white */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); /* Soft floating effect */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 0.6px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+}
+
+/* Clickable Logo */
+#logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.header-logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Navigation Links */
+.main-header a {
+  color: #1c1c1e;
+  text-decoration: none;
+  margin-right: 26px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: -0.2px;
+}
+
+/* Hover Effect */
+.main-header a:hover {
+  color: #007aff;
+  background-color: rgba(0, 122, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Underline Effect */
+.main-header a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background: #007aff;
+  transition: width 0.3s ease, transform 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.main-header a:hover::after {
+  width: 70%;
+}
+
+/* Active Link Styling */
+.main-header .active-link {
+  color: #007aff;
+  font-weight: 600;
+}
+
+.main-header .active-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 70%;
+  height: 2.5px;
+  background: #007aff;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* iOS-Like Tap Feedback */
+.main-header a:active {
+  background-color: rgba(0, 122, 255, 0.15);
+  transform: scale(0.98);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .main-header {
+    background: rgba(28, 28, 30, 0.85);
+    border-bottom: 0.6px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .main-header a {
+    color: #e5e5ea;
+  }
+
+  .main-header a:hover {
+    background-color: rgba(10, 132, 255, 0.15);
+  }
+
+  .main-header .active-link {
+    color: #0a84ff;
+  }
+
+  .header-logo {
+    filter: drop-shadow(0 2px 6px rgba(255, 255, 255, 0.2));
+  }
+
+  .header-logo:hover {
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.3));
+  }
+}

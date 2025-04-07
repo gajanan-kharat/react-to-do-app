@@ -1,0 +1,158 @@
+/* AboutUs.css */
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", 
+                 "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #1c1c1e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-header p {
+    font-size: 1.1rem;
+    color: #636366;
+  }
+  
+  .about-content {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background-color: rgba(245, 245, 247, 0.8);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 0.5px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1c1c1e;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-card p,
+  .about-card li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #3a3a3c;
+  }
+  
+  .about-card ul,
+  .about-card ol {
+    padding-left: 1.2rem;
+  }
+  
+  .about-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  .about-card li::before {
+    content: "•";
+    color: #007aff;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -1.2rem;
+    top: -0.2rem;
+  }
+  
+  .about-card ol {
+    counter-reset: list-counter;
+    padding-left: 1.5rem;
+  }
+  
+  .about-card ol li {
+    counter-increment: list-counter;
+    list-style-type: none;
+  }
+  
+  .about-card ol li::before {
+    content: counter(list-counter) ".";
+    color: #007aff;
+    font-weight: 600;
+    font-size: 1rem;
+    position: absolute;
+    left: -1.5rem;
+    top: 0.1rem;
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .ios-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    background-color: #007aff;
+    color: white;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ios-button:hover {
+    background-color: #0062cc;
+    transform: translateY(-2px);
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .about-header h1 {
+      color: #f5f5f7;
+    }
+    
+    .about-header p {
+      color: #a2a2a8;
+    }
+    
+    .about-card {
+      background-color: rgba(44, 44, 46, 0.8);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    
+    .about-card h2 {
+      color: #f5f5f7;
+    }
+    
+    .about-card p,
+    .about-card li {
+      color: #d1d1d6;
+    }
+    
+    .ios-button {
+      background-color: #0a84ff;
+    }
+    
+    .ios-button:hover {
+      background-color: #007aff;
+    }
+  }

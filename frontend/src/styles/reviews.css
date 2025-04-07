@@ -1,0 +1,119 @@
+/* Reviews.css - iOS Inspired */
+.reviews-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Feedback Card */
+.feedback-card {
+  background-color: rgba(245, 245, 247, 0.9);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Floating Effect */
+.feedback-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Feedback Header */
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Feedback Date */
+.feedback-date {
+  font-size: 0.85rem;
+  color: #6c6c72;
+  font-weight: 500;
+}
+
+/* Feedback Email */
+.feedback-email {
+  color: #0056D2;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.feedback-email:hover {
+  color: #a7c0f0;
+}
+
+/* Feedback Message */
+.feedback-message {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #1c1c1e;
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Add Emoji Prefix */
+.feedback-message::before {
+  content: "💬";
+  font-size: 1.4rem;
+}
+
+/* Loading & Error States */
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .feedback-card {
+    background-color: rgba(44, 44, 46, 0.8);
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.06);
+  }
+  
+  .feedback-date {
+    color: #a2a2a8;
+  }
+
+  .feedback-email {
+    color: #8cb3ff;
+  }
+
+  .feedback-message {
+    color: #e5e5ea;
+  }
+}

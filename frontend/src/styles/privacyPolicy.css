@@ -1,0 +1,139 @@
+/* privacyPolicy.css */
+.legal-container {
+    max-width: 780px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+                 Ubuntu, Cantarell, sans-serif;
+    background-color: rgba(245, 245, 247, 0.8); /* iOS system background */
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .legal-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .legal-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1c1c1e; /* iOS label color */
+    margin-bottom: 0.5rem;
+  }
+  
+  .legal-header p {
+    font-size: 0.9rem;
+    color: #86868b; /* iOS secondary label */
+  }
+  
+  .legal-content section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .legal-content h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #1c1c1e;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .legal-content p {
+    font-size: 0.95rem;
+    color: #3a3a3c; /* iOS tertiary label */
+    margin-bottom: 1rem;
+  }
+  
+  .legal-content ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .legal-content li {
+    font-size: 0.95rem;
+    color: #3a3a3c;
+    margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: none;
+  }
+  
+  .legal-content li:before {
+    content: "•";
+    color: #007aff; /* iOS blue */
+    font-size: 1.2rem;
+    position: absolute;
+    left: -1rem;
+    top: -0.1rem;
+  }
+  
+  .legal-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #007aff;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0062cc;
+    transform: translateY(-1px);
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .legal-container {
+      background-color: rgba(28, 28, 30, 0.8);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .legal-header h1,
+    .legal-content h2 {
+      color: #f5f5f7;
+    }
+    
+    .legal-header p,
+    .legal-content p,
+    .legal-content li {
+      color: #d1d1d6;
+    }
+    
+    .legal-header,
+    .legal-content h2,
+    .legal-footer {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-button {
+      background-color: #0a84ff;
+    }
+    
+    .back-button:hover {
+      background-color: #007aff;
+    }
+    
+    .legal-content li:before {
+      color: #0a84ff;
+    }
+  }
