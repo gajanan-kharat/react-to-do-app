@@ -1,33 +1,58 @@
-/* Reviews.css - iOS Inspired */
+/* Reviews Container - iOS Inspired */
 .reviews-container {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* iOS-inspired Header with Emoji */
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c1c1e;
+}
+
+.reviews-header::before {
+  content: "📝";
+  margin-right: 12px;
+  font-size: 1.8rem;
 }
 
 /* Grid Layout */
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
-/* Feedback Card */
+/* iOS-style Feedback Card */
 .feedback-card {
-  background-color: rgba(245, 245, 247, 0.9);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
   padding: 1.5rem;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Floating Effect */
 .feedback-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Feedback Header */
@@ -35,44 +60,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Feedback Date */
 .feedback-date {
   font-size: 0.85rem;
-  color: #6c6c72;
+  color: #636366;
   font-weight: 500;
 }
 
 /* Feedback Email */
 .feedback-email {
-  color: #0056D2;
+  color: #0a84ff;
   font-weight: 500;
   margin-bottom: 1rem;
   font-size: 1rem;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease;
 }
 
 .feedback-email:hover {
-  color: #a7c0f0;
+  color: #0071e3;
 }
 
 /* Feedback Message */
 .feedback-message {
   line-height: 1.7;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #1c1c1e;
-  font-weight: 500;
   display: flex;
-  gap: 0.5rem;
-  align-items: center;
+  gap: 0.8rem;
+  align-items: flex-start;
 }
 
-/* Add Emoji Prefix */
+/* Speech Bubble Emoji */
 .feedback-message::before {
   content: "💬";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
 }
 
 /* Loading & Error States */
@@ -82,38 +109,237 @@
   padding: 2rem;
   font-size: 1.1rem;
   font-weight: 500;
+  color: #636366;
 }
-.reviews-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease-in-out;
+
+.error {
+  color: #ff3b30;
 }
+
+/* Back Button (if needed) */
+.back-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(10, 132, 255, 0.12);
+  color: #0a84ff;
+  border-radius: 10px;
+  text-decoration: none;
+  
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.back-btn:hover {
+  background: rgba(10, 132, 255, 0.2);
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-  .feedback-card {
-    background-color: rgba(44, 44, 46, 0.8);
-    border-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.06);
+  .reviews-header {
+    background: rgba(44, 44, 46, 0.75);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.1);
   }
   
+  .feedback-card {
+    background: rgba(44, 44, 46, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .feedback-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .feedback-date {
-    color: #a2a2a8;
+    color: #8e8e93;
   }
 
   .feedback-email {
-    color: #8cb3ff;
+    color: #5fa8ff;
+  }
+
+  .feedback-email:hover {
+    color: #7fb7ff;
   }
 
   .feedback-message {
     color: #e5e5ea;
+  }
+
+  .loading {
+    color: #8e8e93;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reviews-header {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+}
+
+/* ========== COMPLETE RESPONSIVE MEDIA QUERIES ========== */
+
+/* Ultra-Wide Screens (2000px+) */
+@media (min-width: 2000px) {
+  .reviews-container {
+    max-width: 1800px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .button-group {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+/* Large Desktops (1440px) */
+@media (max-width: 2000px) and (min-width: 1440px) {
+  .reviews-container {
+    max-width: 1200px;
+  }
+  .button-group {
+    gap: 18px;
+  }
+}
+
+/* Standard Laptops (1280px) */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .reviews-container {
+    max-width: 1000px;
+  }
+  .button-group {
+    gap: 16px;
+  }
+}
+
+/* Large Tablets (iPad Pro Landscape) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .reviews-container {
+    max-width: 800px;
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .button-group {
+    gap: 14px;
+  }
+  .back-button {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Medium Tablets (iPad Air Portrait) */
+@media (max-width: 768px) and (min-width: 600px) {
+  .reviews-container {
+    max-width: 90%;
+  }
+  .button-group {
+    gap: 12px;
+  }
+  .back-button {
+    padding: 0.7rem 1.1rem;
+  }
+}
+
+/* Small Tablets/Large Phones */
+@media (max-width: 600px) and (min-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .button-group {
+    gap: 10px;
+  }
+  .back-button {
+    padding: 0.65rem 1rem;
+  }
+}
+
+/* Mobile Phones (Most Common) */
+@media (max-width: 480px) and (min-width: 375px) {
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .back-button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+}
+
+/* Small Phones (iPhone SE) */
+@media (max-width: 375px) and (min-width: 320px) {
+  .button-group {
+    gap: 6px;
+  }
+  .back-button {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Super Small Devices (Galaxy Fold) */
+@media (max-width: 320px) {
+  .button-group {
+    gap: 4px;
+  }
+  .back-button {
+    padding: 0.55rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Foldables Landscape Mode */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+  .reviews-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .button-group {
+    gap: 15px;
+  }
+}
+
+/* Button Group Specific Styles */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: rgba(10, 132, 255, 0.12);
+  color: #0a84ff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  min-width: 160px;
+  box-sizing: border-box;
+  margin: 0 !important; /* Remove all margins */
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .back-button {
+    background: rgba(10, 132, 255, 0.2);
+    color: #5fa8ff;
+  }
+  .back-button:hover {
+    background: rgba(10, 132, 255, 0.3);
   }
 }

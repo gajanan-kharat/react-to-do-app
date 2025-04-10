@@ -42,3 +42,68 @@
   /* Your existing button styles */
   margin-top: 1rem;
 }
+/* Small phones (iPhone SE, Galaxy Fold) */
+@media (max-width: 360px) {
+  .ios-button {
+    font-size: 14px;
+    padding: 0.6rem 1.5rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Regular phones (Pixel 5, iPhone 12, Galaxy S20) */
+@media (min-width: 361px) and (max-width: 480px) {
+  .ios-button {
+    font-size: 15px;
+    padding: 0.7rem 1.8rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Medium phones and small tablets (iPhone XR, iPad Mini) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .ios-button {
+    font-size: 16px;
+    padding: 0.8rem 2rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Tablets and small laptops (iPad Air, Surface Pro) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ios-button {
+    font-size: 17px;
+    padding: 0.9rem 2.2rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Desktops (MacBook Air, Full HD monitors) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .ios-button {
+    font-size: 18px;
+    padding: 1rem 2.5rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
+
+/* Ultra-wide screens (4K monitors) */
+@media (min-width: 1441px) {
+  .ios-button {
+    font-size: 19px;
+    padding: 1.2rem 2.8rem;
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}

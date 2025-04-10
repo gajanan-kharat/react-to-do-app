@@ -1,7 +1,7 @@
 // src/components/Reviews.jsx
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/reviews.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/reviews.css";
 
 export default function Reviews() {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -11,8 +11,8 @@ export default function Reviews() {
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
-        const response = await fetch('http://localhost:3000/feedback');
-        if (!response.ok) throw new Error('Failed to fetch feedback');
+        const response = await fetch("http://localhost:3000/feedback");
+        if (!response.ok) throw new Error("Failed to fetch feedback");
         const data = await response.json();
         setFeedbacks(data.data);
       } catch (err) {
@@ -40,14 +40,22 @@ export default function Reviews() {
                 {new Date(feedback.createdAt).toLocaleDateString()}
               </span>
             </div>
-            <p className="feedback-email">{feedback.email}</p>
+            <a href={`mailto:${feedback.email}`} className="feedback-email">
+              {feedback.email}
+            </a>
             <p className="feedback-message">{feedback.message}</p>
           </div>
         ))}
       </div>
+      <div className="button-group">
+
+      <Link to="/feedback" style={{ marginRight: "10px" }} className="back-button">
+        Submit Your Feedback
+      </Link>
       <Link to="/" className="back-button">
         Back to App
       </Link>
+      </div>
     </div>
   );
 }

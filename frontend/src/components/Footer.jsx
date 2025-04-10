@@ -14,7 +14,7 @@ export default function Footer() {
             <Link to="/terms">Terms Of Service</Link>
             <Link to="/contact">Contact Us</Link>
           </div>
-          <p className="app-version">Version 1.0.0</p>
+          <p className="app-version">Version 1.0.1</p>
         </div>
       </div>
     </footer>

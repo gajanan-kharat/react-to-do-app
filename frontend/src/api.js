@@ -62,7 +62,7 @@ export const getDeletedTodos = async () => {
 };
 
 export const restoreTodo = async (id) => {
-  const response = await fetch(`${BACKEND_URL}/recyclebin/restore/${id}`, {
+  const response = await fetch(`${BACKEND_URL}/todos/recyclebin/restore/${id}`, {
     method: "PATCH",
   });
   if (!response.ok) throw new Error("Failed to restore task");

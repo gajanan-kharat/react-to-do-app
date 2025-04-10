@@ -3,10 +3,17 @@ import "../styles/myList.css";
 import { Link } from "react-router-dom";
 import { handleToggleCompleted, handleDelete } from "../services/taskService";
 
-export default function MyList({ tasks = [], setTasks }) {
+export default function MyList({ tasks = [], setTasks, deletedTasks, loadTasks }) {
+  const deletedCount = deletedTasks ? deletedTasks.length : 0;
+  console.log("Deleted count", deletedCount);
   return (
     <div className="tasklist-container">
       <h1>My List</h1>
+
+      <Link to="/recyclebin" className="recycle-bin-link">
+        View Recycle Bin ({deletedCount})
+      </Link>
+
       {tasks.length === 0 ? (
         <h1 className="task-not-found">No Tasks Found</h1>
       ) : (
@@ -32,10 +39,10 @@ export default function MyList({ tasks = [], setTasks }) {
                 {task.task} (Assigned to: {task.assignedTo})
               </span>
               <button
-                onClick={() => handleDelete(task._id, setTasks)}
+                onClick={async () => await handleDelete(task._id, setTasks, loadTasks)}
                 className="task-button delete-button"
               >
-                Delete Task
+                Move to Bin
               </button>
               <Link
                 to={`/updateTask/${task._id}`}

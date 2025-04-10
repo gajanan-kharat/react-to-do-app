@@ -94,27 +94,6 @@
   background-color: rgba(0, 122, 255, 0.2);
 }
 
-
-.contact-form {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  text-align: center; /* Centers text content */
-}
-
-.contact-form h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #1c1c1e;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
 .form-group {
   margin-bottom: 1.5rem;
   width: 100%;
