@@ -98,3 +98,250 @@
         width: 100%;
     }
 }
+/* ========== Responsive Adjustments ========== */
+
+/* Large Tablets & Small Laptops (e.g., iPad Air Landscape) */
+@media (max-width: 1024px) {
+    .task-form {
+        max-width: 90%;
+        padding: 25px;
+        margin: 20px auto;
+    }
+}
+
+/* Standard Tablets (e.g., iPad Portrait) */
+@media (max-width: 768px) {
+    .task-form {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .task-form input {
+        width: 100% !important; /* Force full width */
+        min-width: auto !important;
+        box-sizing: border-box; /* Prevent overflow */
+    }
+
+    .task-form button {
+        width: 100%;
+    }
+}
+
+/* Large Phones & Small Tablets (e.g., Asus Zenbook Fold Folded) */
+@media (max-width: 600px) {
+    .task-form {
+        padding: 18px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+
+    .task-form input {
+        padding: 10px 14px;
+    }
+}
+
+/* Small Phones (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .task-form {
+        padding: 16px;
+        margin: 10px auto;
+        gap: 10px;
+    }
+
+    .task-form label {
+        font-size: 0.95rem;
+    }
+
+    .task-form input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Small Phones (e.g., Galaxy Fold Unfolded) */
+@media (max-width: 375px) {
+    .task-form {
+        padding: 14px;
+        margin: 8px auto;
+    }
+
+    .task-form input {
+        padding: 7px 10px;
+    }
+}
+
+/* Super Small Devices (e.g., Galaxy Fold Folded) */
+@media (max-width: 320px) {
+    .task-form {
+        padding: 12px;
+    }
+
+    .task-form input,
+    .task-form button {
+        padding: 6px 8px;
+    }
+}
+
+/* Foldables in Landscape (e.g., Asus Zenbook Fold Unfolded) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .task-form {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .task-form input {
+        min-width: 180px;
+        flex: 1;
+    }
+
+    .task-form button {
+        flex: 1;
+    }
+}
+
+/* Ultra-Wide Screens (e.g., Unfolded Foldables) */
+@media (min-width: 1025px) and (max-width: 2208px) {
+    .task-form {
+        max-width: 80%;
+        gap: 20px;
+    }
+}
+/* iPad Air (Portrait - 768px width) */
+@media (max-width: 768px) and (orientation: portrait) {
+    .task-form {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+    
+    .task-form input {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .task-form button {
+        width: 100%;
+    }
+}
+
+/* iPad Air (Landscape - 1024px width) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .task-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .task-form label {
+        width: auto;
+    }
+    
+    .task-form input {
+        min-width: 180px;
+    }
+    
+    .task-form button {
+        width: auto;
+    }
+}
+/* iPad Air (Portrait - 768px width) */
+@media (max-width: 768px) and (orientation: portrait) {
+    .task-form {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+        box-sizing: border-box; /* Prevent padding from causing overflow */
+    }
+    
+    .task-form input {
+        width: 100%;
+        min-width: auto;
+        box-sizing: border-box; /* Critical for input containment */
+    }
+    
+    .task-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* iPad Air (Landscape - 1024px width) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .task-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+        gap: 12px; /* Ensures items don't squeeze too close */
+    }
+    
+    .task-form label {
+        width: auto;
+        flex: 0 0 100%; /* Force labels to full width */
+    }
+    
+    .task-form input {
+        min-width: 180px;
+        flex: 1 1 auto; /* Allow flexible growth but prevent overflow */
+        box-sizing: border-box;
+        max-width: calc(50% - 6px); /* Prevent inputs from exceeding half-width */
+    }
+    
+    .task-form button {
+        width: auto;
+        flex: 1 1 100%; /* Full width if wrapped */
+        box-sizing: border-box;
+    }
+}
+
+/* Asus Zenbook Fold (Folded - 1104px width) */
+@media (max-width: 1104px) and (orientation: portrait) {
+    .task-form {
+        flex-direction: column;
+        padding: 18px;
+        margin: 15px auto;
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+    
+    .task-form input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .task-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Asus Zenbook Fold (Unfolded - 2208px width) */
+@media (min-width: 1105px) and (max-width: 2208px) and (orientation: landscape) {
+    .task-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 80%;
+        gap: 20px;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    
+    .task-form input {
+        min-width: 200px;
+        flex: 1 1 auto;
+        box-sizing: border-box;
+        max-width: calc(33.33% - 14px); /* Prevent inputs from exceeding 1/3 width */
+    }
+    
+    .task-form button {
+        width: auto;
+        flex: 0 0 auto;
+        box-sizing: border-box;
+    }
+}

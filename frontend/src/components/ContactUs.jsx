@@ -44,30 +44,6 @@ export default function ContactUs() {
             </Link>
           </div>
         </section>
-
-        <section className="contact-form">
-          <h2>Send Us a Message</h2>
-          <form>
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" className="ios-input" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" className="ios-input" />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" className="ios-textarea"></textarea>
-            </div>
-
-            <button type="submit" className="ios-button">
-              Send Message
-            </button>
-          </form>
-        </section>
       </div>
 
       <div className="contact-footer">

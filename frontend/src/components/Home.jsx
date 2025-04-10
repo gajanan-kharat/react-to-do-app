@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles/home.css";
 import MyList from "./MyList";
-import {
-  handleSubmit
-} from "../services/taskService";
+import { handleSubmit } from "../services/taskService";
 
-export default function Home({tasks, setTasks}) {
+export default function Home({ tasks, setTasks, deletedTasks, loadTasks }) {
   const [taskName, setTaskName] = useState("");
   const [assignedTo, setAssignedTo] = useState("");
 
@@ -42,7 +40,12 @@ export default function Home({tasks, setTasks}) {
         />
         <button type="submit">Add Task</button>
       </form>
-      <MyList tasks={tasks} setTasks={setTasks} />
+      <MyList
+        tasks={tasks}
+        setTasks={setTasks}
+        deletedTasks={deletedTasks}
+        loadTasks={loadTasks}
+      />
     </div>
   );
 }
